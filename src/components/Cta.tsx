@@ -1,10 +1,8 @@
-import React, { useState } from "react"
 import Image from "next/image"
 import axios from "axios"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Hidden from "@mui/material/Hidden"
-import { loadStripe } from "@stripe/stripe-js"
 import getStripe from "../lib/getStripe"
 
 const img = {
@@ -20,26 +18,8 @@ type Props = {
   margin: boolean
 }
 
-// eslint-disable-next-line react/prop-types
 const CTA = ({ sevenDays, margin }: Props) => {
-  const [buttonColor, setButtonColor] = useState("#00FF00")
-
-  const button = {
-    backgroundColor: buttonColor,
-    color: "white",
-    paddingTop: "1.5vh",
-    paddingBottom: "1.5vh",
-    paddingLeft: 30,
-    paddingRight: 30,
-    textTransform: "none",
-    marginBottom: 10,
-    marginLeft: "auto",
-    marginRight: "auto",
-    marginTop: margin ? "3vh" : null,
-    display: "block",
-  }
-
-  const handleClick: React.FormEventHandler<HTMLFormElement> = async (e) => {
+  const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
 
     const api = process.env.NEXT_PUBLIC_API!
@@ -60,7 +40,7 @@ const CTA = ({ sevenDays, margin }: Props) => {
         variant="contained"
         onClick={handleClick}
         sx={{
-          backgroundColor: "blue",
+          backgroundColor: "green",
           color: "white",
           pt: "1.5vh",
           pb: "1.5vh",
@@ -70,6 +50,10 @@ const CTA = ({ sevenDays, margin }: Props) => {
           marginLeft: "auto",
           marginRight: "auto",
           display: "block",
+
+          // ":hover": {
+          //   backgroundColor: "red",
+          // },
         }}
       >
         <div>
@@ -129,9 +113,11 @@ const CTA = ({ sevenDays, margin }: Props) => {
         Got a question? Email me: jonathan@swiftbadminton.com
       </Typography>
 
-      <div className="wrapper">
-        <div className="ddio_countdown_wrap" />
-      </div>
+      {sevenDays && (
+        <div className="wrapper">
+          <div className="ddio_countdown_wrap" />
+        </div>
+      )}
     </div>
   )
 }
