@@ -1,12 +1,11 @@
 import React, { useState } from "react"
+import Image from "next/image"
 import axios from "axios"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Hidden from "@mui/material/Hidden"
 import { loadStripe } from "@stripe/stripe-js"
-
-const stripePublic = process.env.REACT_APP_STRIPE_PUBLIC
-const stripePromise = loadStripe(stripePublic)
+import getStripe from "../lib/getStripe"
 
 const img = {
   marginLeft: "auto",
@@ -16,8 +15,13 @@ const img = {
   display: "block",
 }
 
+type Props = {
+  sevenDays: boolean
+  margin: boolean
+}
+
 // eslint-disable-next-line react/prop-types
-const CTA = ({ sevenDays, white, margin }) => {
+const CTA = ({ sevenDays, margin }: Props) => {
   const [buttonColor, setButtonColor] = useState("#00FF00")
 
   const button = {
@@ -35,32 +39,38 @@ const CTA = ({ sevenDays, white, margin }) => {
     display: "block",
   }
 
-  const mainText = {
-    // ...styles.p,
-    // margin: 10,
-    // textAlign: "center",
-    // color: white ? "white" : styles.black,
-  }
+  const handleClick: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault()
 
-  const handleClick = async () => {
-    const stripe = await stripePromise
-    const api = process.env.REACT_APP_API
+    const api = process.env.NEXT_PUBLIC_API!
     const response = await axios.post(`${api}/checkout/create-session/ff`)
+    const checkoutSession = response.data
 
-    const session = response.data
-    await stripe.redirectToCheckout({
-      sessionId: session.id,
+    const stripe = await getStripe()
+    const { error } = await stripe!.redirectToCheckout({
+      sessionId: checkoutSession.id,
     })
+
+    console.warn(error.message)
   }
 
   return (
     <div>
       <Button
         variant="contained"
-        // onMouseEnter={() => setButtonColor(styles.greenLight)}
-        // onMouseLeave={() => setButtonColor(styles.green)}
-        // onClick={handleClick}
-        // style={button}
+        onClick={handleClick}
+        sx={{
+          backgroundColor: "blue",
+          color: "white",
+          pt: "1.5vh",
+          pb: "1.5vh",
+          pl: "30px",
+          pr: "30px",
+          textTransform: "none",
+          marginLeft: "auto",
+          marginRight: "auto",
+          display: "block",
+        }}
       >
         <div>
           <Typography
@@ -73,22 +83,51 @@ const CTA = ({ sevenDays, white, margin }) => {
             Get Instant Access
           </Typography>
           <Hidden xsDown>
-            <Typography variant="body1" style={{ fontSize: "1rem" }}>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "1rem",
+                color: "white",
+                mb: 0,
+              }}
+            >
               Click Here to Enroll Now and Reach Your Badminton Goals
             </Typography>
           </Hidden>
         </div>
       </Button>
 
-      <p style={mainText}>100% Risk-free 60 Day Money-back Guarantee</p>
-      <img
+      <Typography
+        variant="body1"
+        sx={{
+          margin: "30px",
+          textAlign: "center",
+          color: "white",
+        }}
+      >
+        100% Risk-free 60 Day Money-back Guarantee
+      </Typography>
+      {/* <img
         src="https://i.imgur.com/CwwcSs9.png"
         alt="Payment accepted"
         style={img}
+      /> */}
+      <Image
+        src="/images/accepted-cards.png"
+        alt="Payment accepted"
+        width={300}
+        height={40}
       />
-      <p style={mainText}>
+      <Typography
+        variant="body1"
+        sx={{
+          margin: "30px",
+          textAlign: "center",
+          color: "white",
+        }}
+      >
         Got a question? Email me: jonathan@swiftbadminton.com
-      </p>
+      </Typography>
 
       <div className="wrapper">
         <div className="ddio_countdown_wrap" />

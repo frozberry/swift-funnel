@@ -9,6 +9,14 @@ import Copyright from "../components/Copyright"
 import Header from "../components/Header"
 import Intro from "../components/Intro"
 import Worksheets from "../components/Worksheets"
+import Videos from "../components/Videos"
+import Cta from "../components/Cta"
+import VideoPlayer from "../components/VideoPlayer"
+import SlowMotion from "../components/SlowMotion"
+import Lcw from "../components/Lcw"
+import SwiftChecklists from "../components/SwiftChecklists"
+import Bonuses from "../components/Bonuses"
+import Faq from "../components/Faq"
 
 const Home: NextPage = () => {
   return (
@@ -23,17 +31,18 @@ const Home: NextPage = () => {
         }}
       >
         <Header />
+        {/* <VideoPlayer /> */}
+        <Cta sevenDays margin />
         <Intro />
+        <Videos />
+        <SlowMotion />
+        <Lcw />
         <Worksheets />
+        <SwiftChecklists />
+        <Bonuses />
+        <Cta sevenDays margin />
 
-        {/* <Typography variant="h4" component="h1" gutterBottom>
-          MUI v5 + Next.js with TypeScript example
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright /> */}
+        <Faq />
       </Box>
     </Container>
   )

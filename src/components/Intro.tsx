@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 
@@ -19,10 +20,16 @@ const Intro = () => {
         What If You Could Skyrocket Your Badminton Game With The Help Of a
         Proven System?
       </Typography>
-      <img
+      {/* <img
         src="https://i.imgur.com/bg3UYcg.png"
         alt="Footwork Fastlane"
         style={img}
+      /> */}
+      <Image
+        src="/images/cover.png"
+        alt="Footwork Fastlane"
+        width={100}
+        height={100}
       />
       <Container style={{ maxWidth: 748 }}>
         <Typography variant="body1">
