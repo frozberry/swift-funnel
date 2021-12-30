@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 
@@ -32,6 +33,14 @@ function Worksheets() {
         alt="PDF Worksheet"
         style={img}
       />
+      <Image
+        src="/worksheet.png"
+        alt="PDF Worksheets"
+        layout="intrinsic"
+        width="100"
+        height="100"
+      />
+
       <Typography variant="body1">Over 40 pages of worksheets</Typography>
 
       <Typography variant="body1">
