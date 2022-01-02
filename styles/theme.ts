@@ -6,6 +6,8 @@ declare module "@mui/material/styles" {
     color: {
       black: string
       bg: string
+      green: string
+      greenLight: string
     }
   }
   // allow configuration using `createTheme`
@@ -13,16 +15,25 @@ declare module "@mui/material/styles" {
     color?: {
       black?: string
       bg?: string
+      green?: string
+      greenLight?: string
     }
+  }
+
+  interface Palette {
+    neutral: Palette["primary"]
+  }
+  interface PaletteOptions {
+    neutral: PaletteOptions["primary"]
   }
 }
 
 // Create a theme instance.
 const theme = createTheme({
   palette: {
-    primary: {
-      main: "#556cd6",
-    },
+    // primary: {
+    //   main: "#556cd6",
+    // },
     secondary: {
       main: "#19857b",
     },
@@ -31,6 +42,9 @@ const theme = createTheme({
     },
     background: {
       default: "#0e182a",
+    },
+    neutral: {
+      main: "#64748B",
     },
   },
   typography: {
@@ -45,7 +59,8 @@ const theme = createTheme({
       letterSpacing: 1.5,
       textAlign: "center",
       marginTop: "1vh",
-      fontSize: "2.5",
+      fontSize: "2.5rem",
+      fontWeight: "bold",
     },
     h2: {
       fontSize: "2rem",
@@ -60,6 +75,8 @@ const theme = createTheme({
   color: {
     black: "#4E616C",
     bg: "#0e182a",
+    green: "#02996C",
+    greenLight: "#49A27F",
   },
 })
 

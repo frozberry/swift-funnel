@@ -33,7 +33,7 @@ const CTA = ({ sevenDays, margin }: Props) => {
         variant="contained"
         onClick={handleClick}
         sx={{
-          backgroundColor: "green",
+          backgroundColor: "bg",
           color: "white",
           pt: "1.5vh",
           pb: "1.5vh",

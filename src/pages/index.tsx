@@ -43,53 +43,52 @@ const Background: React.FC<BgProps> = ({ color, children }) => (
 
 const Home: NextPage = () => {
   return (
-    <Container maxWidth="lg" sx={{}}>
-      <Box
-        sx={{
-          my: 4,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <Container
+      maxWidth={false}
+      disableGutters
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <ThinDiv>
+        <Header />
+      </ThinDiv>
+
+      <VideoPlayer />
+      <ThinDiv>
+        <Cta sevenDays margin />
+      </ThinDiv>
+
+      <Background color="white">
         <ThinDiv>
-          <Header />
+          <Intro />
         </ThinDiv>
+      </Background>
 
-        <VideoPlayer />
+      <Background color="white">
         <ThinDiv>
-          <Cta sevenDays margin />
+          <Videos />
         </ThinDiv>
+      </Background>
 
-        <Background color="white">
-          <ThinDiv>
-            <Intro />
-          </ThinDiv>
-        </Background>
+      <Background color="white">
+        <ThinDiv>
+          <SlowMotion />
+          <Lcw />
+          <Worksheets />
+          <SwiftChecklists />
+          <Bonuses />
+        </ThinDiv>
+      </Background>
 
-        <Background color="white">
-          <ThinDiv>
-            <Videos />
-          </ThinDiv>
-        </Background>
-
-        <Background color="white">
-          <ThinDiv>
-            <SlowMotion />
-            <Lcw />
-            <Worksheets />
-            <SwiftChecklists />
-            <Bonuses />
-          </ThinDiv>
-        </Background>
-
-        <Background color="black">
-          <Cta sevenDays margin />
-        </Background>
-
+      <Cta sevenDays margin />
+      <Background color="white">
         <Faq />
-      </Box>
+      </Background>
+      <Cta sevenDays margin />
     </Container>
   )
 }
