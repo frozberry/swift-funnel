@@ -1,16 +1,8 @@
 import Image from "next/image"
-import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 
 function Worksheets() {
-  const img = {
-    maxHeight: "35vh",
-    width: "auto",
-    boxShadow: "0 15px 45px hsla(0,0%,0%, .3)",
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto",
-  }
   return (
     <div>
       <Typography variant="h3">
@@ -28,18 +20,27 @@ function Worksheets() {
         your footwork, and allows you to literally follow a step by step process
         without stressing out or getting confused.
       </Typography>
-      <img
-        src="https://i.imgur.com/K0Net77.png"
-        alt="PDF Worksheet"
-        style={img}
-      />
-      <Image
-        src="/worksheet.png"
-        alt="PDF Worksheets"
-        layout="intrinsic"
-        width="100"
-        height="100"
-      />
+
+      <Box
+        sx={{
+          maxWidth: "50%",
+          maxHeight: "30%",
+          width: "auto",
+          boxShadow: "0 15px 45px hsla(0,0%,0%, .3)",
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+          my: "20px",
+        }}
+      >
+        <Image
+          src="/images/worksheet.png"
+          alt="PDF Worksheets"
+          layout="responsive"
+          width={788}
+          height={1116}
+        />
+      </Box>
 
       <Typography variant="body1">Over 40 pages of worksheets</Typography>
 

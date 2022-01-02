@@ -1,17 +1,7 @@
 import Image from "next/image"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
-
-const img = {
-  maxWidth: "75%",
-  border: "3px solid rgb(158, 221, 248)",
-  borderRadius: 7,
-  display: "block",
-  marginLeft: "auto",
-  marginRight: "auto",
-  marginTop: 20,
-  marginBottom: 20,
-}
+import Box from "@mui/material/Box"
 
 const Intro = () => {
   return (
@@ -20,17 +10,23 @@ const Intro = () => {
         What If You Could Skyrocket Your Badminton Game With The Help Of a
         Proven System?
       </Typography>
-      {/* <img
-        src="https://i.imgur.com/bg3UYcg.png"
-        alt="Footwork Fastlane"
-        style={img}
-      /> */}
-      <Image
-        src="/images/cover.png"
-        alt="Footwork Fastlane"
-        width={100}
-        height={100}
-      />
+      <Box
+        sx={{
+          maxWidth: "75%",
+          display: "block",
+          my: "20px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      >
+        <Image
+          src="/images/cover.png"
+          alt="Footwork Fastlane"
+          width={1920}
+          height={1080}
+          layout="responsive"
+        />
+      </Box>
       <Container style={{ maxWidth: 748 }}>
         <Typography variant="body1">
           Introducing...The Footwork Fastlane:

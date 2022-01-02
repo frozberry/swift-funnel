@@ -3,15 +3,8 @@ import axios from "axios"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Hidden from "@mui/material/Hidden"
+import Box from "@mui/material/Box"
 import getStripe from "../lib/getStripe"
-
-const img = {
-  marginLeft: "auto",
-  marginRight: "auto",
-  maxWidth: "30%",
-  height: "auto",
-  display: "block",
-}
 
 type Props = {
   sevenDays: boolean
@@ -91,17 +84,23 @@ const CTA = ({ sevenDays, margin }: Props) => {
       >
         100% Risk-free 60 Day Money-back Guarantee
       </Typography>
-      {/* <img
-        src="https://i.imgur.com/CwwcSs9.png"
-        alt="Payment accepted"
-        style={img}
-      /> */}
-      <Image
-        src="/images/accepted-cards.png"
-        alt="Payment accepted"
-        width={300}
-        height={40}
-      />
+      <Box
+        sx={{
+          marginLeft: "auto",
+          marginRight: "auto",
+          maxWidth: "30%",
+          height: "auto",
+          display: "block",
+        }}
+      >
+        <Image
+          src="/images/accepted-cards.png"
+          alt="Payment accepted"
+          width={303}
+          height={44}
+          layout="responsive"
+        />
+      </Box>
       <Typography
         variant="body1"
         sx={{
