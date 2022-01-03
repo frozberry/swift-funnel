@@ -1,4 +1,5 @@
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 
 const data = [
@@ -44,13 +45,9 @@ const data = [
   },
 ]
 
-const root = {
-  marginBottom: 60,
-}
-
 const Bonuses = () => {
   return (
-    <div style={root}>
+    <Box mb="40px">
       <Typography variant="h3">
         <b>Bonus Courses</b>
       </Typography>
@@ -78,7 +75,7 @@ const Bonuses = () => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Box>
   )
 }
 

@@ -1,8 +1,9 @@
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 
-export default function SwiftChecklists() {
+const SwiftChecklists = () => {
   return (
-    <div>
+    <Box mb="40px">
       <Typography variant="h3">
         <b>Swift Checklists</b>
       </Typography>
@@ -28,6 +29,8 @@ export default function SwiftChecklists() {
         correct them. You literally won’t find anything comparable to the Swift
         Checklist anywhere else.
       </Typography>
-    </div>
+    </Box>
   )
 }
+
+export default SwiftChecklists

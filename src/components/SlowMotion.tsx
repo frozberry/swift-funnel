@@ -1,4 +1,5 @@
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 
 const SlowMotion = () => {
   const img = {
@@ -13,7 +14,7 @@ const SlowMotion = () => {
   }
 
   return (
-    <div>
+    <Box mb="40px">
       <Typography variant="h3">
         <b>Buttery Smooth Slo-Mo Breakdown</b>
       </Typography>
@@ -44,7 +45,7 @@ const SlowMotion = () => {
         You’ll see every detail of the movement exactly, and fast track your
         progress by just COPYING what you see on the screen.
       </Typography>
-    </div>
+    </Box>
   )
 }
 

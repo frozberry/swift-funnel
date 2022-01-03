@@ -2,9 +2,9 @@ import Image from "next/image"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 
-function Worksheets() {
+const Worksheets = () => {
   return (
-    <div>
+    <Box mb="40px">
       <Typography variant="h3">
         <b>Actionable Step-By-Step &quot;Accelerator Worksheets&quot;</b>
       </Typography>
@@ -55,7 +55,7 @@ function Worksheets() {
         course, you’ll have fast and precise footwork - the best way of taking
         your badminton game to the next level.
       </Typography>
-    </div>
+    </Box>
   )
 }
 
