@@ -2,29 +2,13 @@ import { createTheme } from "@mui/material/styles"
 import { red } from "@mui/material/colors"
 
 declare module "@mui/material/styles" {
-  interface Theme {
-    color: {
-      black: string
-      bg: string
-      green: string
-      greenLight: string
-    }
-  }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
-    color?: {
-      black?: string
-      bg?: string
-      green?: string
-      greenLight?: string
-    }
-  }
-
   interface Palette {
-    neutral: Palette["primary"]
+    accordion: Palette["primary"]
+    bgLight: Palette["primary"]
   }
   interface PaletteOptions {
-    neutral: PaletteOptions["primary"]
+    accordion: PaletteOptions["primary"]
+    bgLight: PaletteOptions["primary"]
   }
 }
 
@@ -43,8 +27,11 @@ const theme = createTheme({
     background: {
       default: "#0e182a",
     },
-    neutral: {
-      main: "#64748B",
+    accordion: {
+      main: "#385263",
+    },
+    bgLight: {
+      main: "#F3F7F9",
     },
   },
   typography: {
@@ -71,12 +58,6 @@ const theme = createTheme({
       marginBottom: 24,
       alignSelf: "flex-start",
     },
-  },
-  color: {
-    black: "#4E616C",
-    bg: "#0e182a",
-    green: "#02996C",
-    greenLight: "#49A27F",
   },
 })
 

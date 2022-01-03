@@ -28,12 +28,12 @@ const CTA = ({ sevenDays, margin }: Props) => {
   }
 
   return (
-    <div>
+    <Box my="50px">
       <Button
         variant="contained"
         onClick={handleClick}
         sx={{
-          backgroundColor: "bg",
+          // backgroundColor: "neutral.main",
           color: "white",
           pt: "1.5vh",
           pb: "1.5vh",
@@ -117,7 +117,7 @@ const CTA = ({ sevenDays, margin }: Props) => {
           <div className="ddio_countdown_wrap" />
         </div>
       )}
-    </div>
+    </Box>
   )
 }
 

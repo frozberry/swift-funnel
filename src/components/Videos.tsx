@@ -1,8 +1,9 @@
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 
 const Videos = () => {
   return (
-    <div>
+    <Box>
       <Typography variant="h3">
         <b> 27 Premium Video Lessons</b>
       </Typography>
@@ -48,12 +49,12 @@ const Videos = () => {
         some of the most rewarding
       </Typography>
 
-      <Typography variant="body1" mb={50}>
+      <Typography variant="body1">
         I&apos;ve put in a lot of work to make sure these videos are top notch
         from a student&apos;s standpoint. I refine and crafted each video until
         I was happy that it was BETTER than my in-person coaching.
       </Typography>
-    </div>
+    </Box>
   )
 }
 

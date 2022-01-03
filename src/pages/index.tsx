@@ -23,7 +23,7 @@ const ThinDiv: React.FC = ({ children }) => (
   <Container style={{ maxWidth: 748 }}>{children}</Container>
 )
 
-const MDiv: React.FC = ({ children }) => (
+const MediumDiv: React.FC = ({ children }) => (
   <Container maxWidth="md">{children}</Container>
 )
 
@@ -35,6 +35,7 @@ const Background: React.FC<BgProps> = ({ color, children }) => (
       flexDirection: "column",
       alignItems: "center",
       backgroundColor: color,
+      py: "50px",
     }}
   >
     {children}
@@ -56,24 +57,20 @@ const Home: NextPage = () => {
       <ThinDiv>
         <Header />
       </ThinDiv>
-
       <VideoPlayer />
       <ThinDiv>
         <Cta sevenDays margin />
       </ThinDiv>
-
       <Background color="white">
         <ThinDiv>
           <Intro />
         </ThinDiv>
       </Background>
-
-      <Background color="white">
+      <Background color="bgLight.main">
         <ThinDiv>
           <Videos />
         </ThinDiv>
       </Background>
-
       <Background color="white">
         <ThinDiv>
           <SlowMotion />
@@ -83,10 +80,11 @@ const Home: NextPage = () => {
           <Bonuses />
         </ThinDiv>
       </Background>
-
       <Cta sevenDays margin />
       <Background color="white">
-        <Faq />
+        <MediumDiv>
+          <Faq />
+        </MediumDiv>
       </Background>
       <Cta sevenDays margin />
     </Container>

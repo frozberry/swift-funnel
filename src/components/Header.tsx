@@ -4,7 +4,7 @@ import Box from "@mui/material/Box"
 
 const Header = () => {
   return (
-    <div>
+    <Box>
       <Box
         sx={{
           display: "block",
@@ -22,11 +22,11 @@ const Header = () => {
           layout="responsive"
         />
       </Box>
-      <Typography variant="h1">
+      <Typography variant="h1" mb="30px">
         Revealed: The Hidden System That Any Badminton Player Can Use To
         Skyrocket Their Progress
       </Typography>
-    </div>
+    </Box>
   )
 }
 

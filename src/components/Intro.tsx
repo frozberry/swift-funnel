@@ -5,7 +5,7 @@ import Box from "@mui/material/Box"
 
 const Intro = () => {
   return (
-    <div>
+    <Box>
       <Typography variant="h2">
         What If You Could Skyrocket Your Badminton Game With The Help Of a
         Proven System?
@@ -79,7 +79,7 @@ const Intro = () => {
           </b>
         </Typography>
       </Container>
-    </div>
+    </Box>
   )
 }
 

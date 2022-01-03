@@ -15,7 +15,6 @@ const VideoPlayer = () => {
         sx={{
           position: "relative",
           pt: "56.25%",
-          mb: "40px",
         }}
       >
         <ReactPlayer

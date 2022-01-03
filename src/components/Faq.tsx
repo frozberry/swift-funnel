@@ -1,77 +1,49 @@
+import React from "react"
+import Container from "@mui/material/Container"
 import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import Typography from "@mui/material/Typography"
-import ExpandMoreIcon from "@mui/icons-material"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 import faq from "../lib/FaqCopy"
-// import styles from "../misc/styles"
-
-const container = {
-  marginTop: 20,
-  marginBottom: 20,
-  borderRadius: 7,
-}
-const accordionStyle = {
-  width: "100%",
-  backgroundColor: "#385263",
-  border: "none",
-}
-const answerBox = {
-  paddingLeft: "10%",
-  paddingRight: "10%",
-  // backgroundColor: styles.white,
-}
-
-const icon = {
-  color: "white",
-}
 
 const Faq = () => {
-  //   const AccordionStyled = withStyles({
-  //     root: accordionStyle,
-  //     // expanded: { marginBottom: 80 },
-  //   })(Accordion)
-
-  //   const AccordionSummaryStyled = withStyles({
-  //     // content: { marginTop: mobile ? 0 : 15, marginBottom: mobile ? 0 : 15 },
-  //     // expanded: { marginTop: 12, marginBottom: 12 },
-  //   })(AccordionSummary)
-
-  //   const accordion = (faqObject) =>
-  //     faqObject.map((item) => (
-  //       // item is jsx, so key unique text is in props.children
-  //       <React.Fragment key={item.question.props.children}>
-  //         <AccordionStyled>
-  //           <AccordionSummaryStyled expandIcon={<ExpandMoreIcon style={icon} />}>
-  //             <div>{item.question}</div>
-  //           </AccordionSummaryStyled>
-  //           <AccordionDetails style={answerBox}>
-  //             <div>{item.answer}</div>
-  //           </AccordionDetails>
-  //         </AccordionStyled>
-  //       </React.Fragment>
-  //     ))
-
+  const accordion = (faqObject: any) =>
+    faqObject.map((item: any) => (
+      // item is jsx, so key unique text is in props.children
+      <React.Fragment key={item.question.props.children}>
+        <Accordion sx={{ width: "100%" }}>
+          <AccordionSummary
+            sx={{ backgroundColor: "#385263" }}
+            expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+          >
+            <div>{item.question}</div>
+          </AccordionSummary>
+          <AccordionDetails sx={{ px: "10%" }}>
+            <div>{item.answer}</div>
+          </AccordionDetails>
+        </Accordion>
+      </React.Fragment>
+    ))
   return (
     <div>
       <Typography variant="h2">Frequently Asked Questions</Typography>
 
-      <div style={container}>
+      <Container sx={{ my: "20px" }}>
         <Typography variant="h3">Course Questions</Typography>
-        {/* {accordion(faq.courseFaq)} */}
-      </div>
+        {accordion(faq.courseFaq)}
+      </Container>
 
-      <div style={container}>
+      <Container sx={{ my: "20px" }}>
         <Typography variant="h3">Badminton Questions</Typography>
-        {/* {accordion(faq.badmintonFaq)} */}
-      </div>
+        {accordion(faq.badmintonFaq)}
+      </Container>
 
-      {/* <div style={{ ...container, marginBottom: mobile ? 20 : 70 }}> */}
-      <div style={{ ...container, marginBottom: 70 }}>
+      <Container sx={{ my: "20px" }}>
         <Typography variant="h3">Enrollment Questions</Typography>
-        {/* {accordion(faq.enrollmentFaq)} */}
-      </div>
+        {accordion(faq.enrollmentFaq)}
+      </Container>
     </div>
   )
 }
