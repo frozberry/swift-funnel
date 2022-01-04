@@ -81,7 +81,6 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
         sx={{
           margin: {
             xs: "10px",
-            sm: "30px",
           },
           textAlign: "center",
           color: "white",
@@ -111,7 +110,6 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
         sx={{
           margin: {
             xs: "10px",
-            sm: "30px",
           },
           textAlign: "center",
           color: "white",
