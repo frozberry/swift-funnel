@@ -42,7 +42,16 @@ const Worksheets = () => {
         />
       </Box>
 
-      <Typography variant="body1">Over 40 pages of worksheets</Typography>
+      <Typography
+        variant="body1"
+        sx={{
+          mt: "20px",
+          textAlign: "center",
+          fontSize: "1rem",
+        }}
+      >
+        Over 40 pages of worksheets
+      </Typography>
 
       <Typography variant="body1">
         Because I designed them specifically to be the perfect supplement to my
