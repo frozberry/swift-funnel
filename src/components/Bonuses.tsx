@@ -47,7 +47,7 @@ const data = [
 
 const Bonuses = () => {
   return (
-    <Box mb="20px">
+    <Box sx={{ mb: { xs: "0px", sm: "20px" } }}>
       <Typography variant="h3">
         <b>Bonus Courses</b>
       </Typography>
@@ -56,22 +56,18 @@ const Bonuses = () => {
         When you sign up today, you also get access to these 4 bonus courses,
         valued at £438, <b>totally free of charge.</b>
       </Typography>
-      <Grid container spacing={5}>
+      <Grid container>
         {data.map((item) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            style={{ paddingBottom: 0 }}
-            key={item.webm}
-          >
-            <div>
+          <Grid item xs={12} sm={6} sx={{ p: "0px" }} key={item.webm}>
+            <div
+              style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}
+            >
               <video autoPlay loop muted playsInline style={{ width: "100%" }}>
                 <source src={item.webm} type="video/webm" />
                 <source src={item.mp4} type="video/mp4" />
               </video>
+              {item.copy}
             </div>
-            {item.copy}
           </Grid>
         ))}
       </Grid>
