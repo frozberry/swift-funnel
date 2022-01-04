@@ -6,11 +6,11 @@ import Box from "@mui/material/Box"
 import getStripe from "../lib/getStripe"
 
 type Props = {
-  sevenDays: boolean
+  sevenDays?: boolean
   margin?: boolean
 }
 
-const CTA = ({ sevenDays, margin = false }: Props) => {
+const CTA = ({ sevenDays = false, margin = false }: Props) => {
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
 
