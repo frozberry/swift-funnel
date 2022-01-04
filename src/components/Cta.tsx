@@ -30,6 +30,10 @@ const CTA = ({ sevenDays, margin = false }: Props) => {
     <Box
       sx={{
         my: "50px",
+        my: {
+          xs: "20px",
+          sm: "50px",
+        },
         mb: margin ? "50px" : "0px",
       }}
     >
@@ -76,7 +80,10 @@ const CTA = ({ sevenDays, margin = false }: Props) => {
       <Typography
         variant="body1"
         sx={{
-          margin: "30px",
+          margin: {
+            xs: "10px",
+            sm: "30px",
+          },
           textAlign: "center",
           color: "white",
         }}
@@ -103,7 +110,10 @@ const CTA = ({ sevenDays, margin = false }: Props) => {
       <Typography
         variant="body1"
         sx={{
-          margin: "30px",
+          margin: {
+            xs: "10px",
+            sm: "30px",
+          },
           textAlign: "center",
           color: "white",
         }}
