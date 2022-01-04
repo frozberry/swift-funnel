@@ -1,4 +1,4 @@
-const df = `function SendUrlToDeadlineFunnel(e) {
+const deadlineFunnel = `function SendUrlToDeadlineFunnel(e) {
   var r,
     t,
     c,
@@ -57,4 +57,4 @@ var dfParentUrl =
   var s2 = document.getElementsByTagName("script")[0]
   s2.parentNode.insertBefore(s, s2)
 })()`
-export default df
+export default deadlineFunnel

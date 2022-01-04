@@ -1,4 +1,5 @@
 import Head from "next/head"
+import deadlineFunnel from "../lib/deadlineFunnel"
 import { AppProps } from "next/app"
 import { ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
@@ -22,6 +23,9 @@ export default function MyApp(props: MyAppProps) {
         <title>Footwork Fastlane</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.png" />
+        <script type="text/javascript" data-cfasync="false">
+          {deadlineFunnel}
+        </script>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
