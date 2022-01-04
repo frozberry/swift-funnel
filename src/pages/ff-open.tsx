@@ -29,9 +29,7 @@ const Home: NextPage = () => {
         <Header />
       </ThinDiv>
       <VideoPlayer />
-      <ThinDiv>
-        <Cta margin />
-      </ThinDiv>
+      <Cta margin />
       <Background color="white">
         <ThinDiv>
           <Intro />
