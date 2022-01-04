@@ -1,5 +1,3 @@
-import React from "react"
-
 const question = {
   fontWeight: "normal",
   fontSize: "1.1rem",
@@ -492,10 +490,10 @@ const enrollmentFaq = [
   },
 ]
 
-
-
-export default {
+const faqs = {
   courseFaq,
   badmintonFaq,
   enrollmentFaq,
 }
+
+export default faqs
