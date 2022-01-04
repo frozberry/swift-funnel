@@ -7,10 +7,10 @@ import getStripe from "../lib/getStripe"
 
 type Props = {
   sevenDays: boolean
-  margin: boolean
+  margin?: boolean
 }
 
-const CTA = ({ sevenDays, margin }: Props) => {
+const CTA = ({ sevenDays, margin = false }: Props) => {
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
 
@@ -27,25 +27,23 @@ const CTA = ({ sevenDays, margin }: Props) => {
   }
 
   return (
-    <Box my="50px">
+    <Box
+      sx={{
+        my: "50px",
+        mb: margin ? "50px" : "0px",
+      }}
+    >
       <Button
         variant="contained"
         onClick={handleClick}
         sx={{
-          // backgroundColor: "neutral.main",
           color: "white",
-          pt: "1.5vh",
-          pb: "1.5vh",
-          pl: "30px",
-          pr: "30px",
+          py: "1.5vh",
+          px: "30px",
           textTransform: "none",
           marginLeft: "auto",
           marginRight: "auto",
           display: "block",
-
-          // ":hover": {
-          //   backgroundColor: "red",
-          // },
         }}
       >
         <Box>

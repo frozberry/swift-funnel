@@ -91,7 +91,7 @@ const Home: NextPage = () => {
           <Faq />
         </MediumDiv>
       </Background>
-      <Cta sevenDays margin />
+      <Cta sevenDays />
     </Container>
   )
 }

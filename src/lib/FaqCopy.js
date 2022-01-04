@@ -2,12 +2,12 @@ import React from "react"
 
 const question = {
   fontWeight: "normal",
-  fontSize: "1.25rem",
+  fontSize: "1.1rem",
   color: "white",
   margin: 5,
 }
 const answer = {
-  fontSize: "1.25rem",
+  fontSize: "1.1rem",
   lineHeight: "1.8",
   marginBottom: 20,
 }
@@ -491,6 +491,8 @@ const enrollmentFaq = [
     ),
   },
 ]
+
+
 
 export default {
   courseFaq,

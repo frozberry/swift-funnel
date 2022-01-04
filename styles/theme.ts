@@ -24,7 +24,7 @@ let theme = createTheme({
       main: red.A400,
     },
     background: {
-      default: "#0e182a",
+      default: "#0F1B35",
     },
     accordion: {
       main: "#385263",
@@ -35,7 +35,7 @@ let theme = createTheme({
   },
   typography: {
     body1: {
-      fontSize: "1.4rem",
+      fontSize: "1.25rem",
       lineHeight: 1.8,
       marginBottom: 24,
       color: "#4E616C",
@@ -58,6 +58,8 @@ let theme = createTheme({
       fontSize: "1.75rem",
       marginBottom: 24,
       alignSelf: "flex-start",
+      fontWeight: "bold",
+      color: "#232129",
     },
   },
   breakpoints: {
