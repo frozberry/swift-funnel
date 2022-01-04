@@ -29,11 +29,14 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
   return (
     <Box
       sx={{
-        my: {
+        mt: {
           xs: "20px",
           sm: "50px",
         },
-        mb: margin ? "50px" : "0px",
+        mb: {
+          xs: margin ? "20px" : "0px",
+          sm: margin ? "50px" : "0px",
+        },
       }}
     >
       <Button
