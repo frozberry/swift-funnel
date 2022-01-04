@@ -4,6 +4,7 @@ import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 import faq from "../lib/FaqCopy"
@@ -27,24 +28,24 @@ const Faq = () => {
       </React.Fragment>
     ))
   return (
-    <div>
+    <Box>
       <Typography variant="h2">Frequently Asked Questions</Typography>
 
-      <Container sx={{ my: "20px" }}>
+      <Box sx={{ my: "20px" }}>
         <Typography variant="h3">Course Questions</Typography>
         {accordion(faq.courseFaq)}
-      </Container>
+      </Box>
 
-      <Container sx={{ my: "20px" }}>
+      <Box sx={{ my: "20px" }}>
         <Typography variant="h3">Badminton Questions</Typography>
         {accordion(faq.badmintonFaq)}
-      </Container>
+      </Box>
 
-      <Container sx={{ my: "20px" }}>
+      <Box sx={{ my: "20px" }}>
         <Typography variant="h3">Enrollment Questions</Typography>
         {accordion(faq.enrollmentFaq)}
-      </Container>
-    </div>
+      </Box>
+    </Box>
   )
 }
 

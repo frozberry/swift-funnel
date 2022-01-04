@@ -2,12 +2,12 @@ import React from "react"
 
 const question = {
   fontWeight: "normal",
-  fontSize: "1.1rem",
+  fontSize: "1.25rem",
   color: "white",
   margin: 5,
 }
 const answer = {
-  fontSize: "1.1rem",
+  fontSize: "1.25rem",
   lineHeight: "1.8",
   marginBottom: 20,
 }

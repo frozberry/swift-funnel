@@ -20,16 +20,21 @@ type BgProps = {
 }
 
 const ThinDiv: React.FC = ({ children }) => (
-  <Container style={{ maxWidth: 748 }}>{children}</Container>
+  <Container maxWidth={false} disableGutters sx={{ maxWidth: "768px" }}>
+    {children}
+  </Container>
 )
 
 const MediumDiv: React.FC = ({ children }) => (
-  <Container maxWidth="md">{children}</Container>
+  <Container maxWidth="md" disableGutters>
+    {children}
+  </Container>
 )
 
 const Background: React.FC<BgProps> = ({ color, children }) => (
   <Container
     maxWidth={false}
+    disableGutters
     sx={{
       display: "flex",
       flexDirection: "column",

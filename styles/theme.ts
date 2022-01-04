@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles"
+import { createTheme, responsiveFontSizes } from "@mui/material/styles"
 import { red } from "@mui/material/colors"
 
 declare module "@mui/material/styles" {
@@ -12,8 +12,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-// Create a theme instance.
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     // primary: {
     //   main: "#556cd6",
@@ -36,7 +35,7 @@ const theme = createTheme({
   },
   typography: {
     body1: {
-      fontSize: "1.25rem",
+      fontSize: "1.4rem",
       lineHeight: 1.8,
       marginBottom: 24,
       color: "#4E616C",
@@ -52,6 +51,8 @@ const theme = createTheme({
     h2: {
       fontSize: "2rem",
       textAlign: "center",
+      fontWeight: "bold",
+      color: "#232129",
     },
     h3: {
       fontSize: "1.75rem",
@@ -59,6 +60,17 @@ const theme = createTheme({
       alignSelf: "flex-start",
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
 })
+
+// theme = responsiveFontSizes(theme)
 
 export default theme
