@@ -121,9 +121,19 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
       </Typography>
 
       {sevenDays && (
-        <div className="wrapper">
+        <Box
+          className="wrapper"
+          sx={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            width: {
+              xs: "60%",
+              sm: "40%",
+            },
+          }}
+        >
           <div className="ddio_countdown_wrap" />
-        </div>
+        </Box>
       )}
     </Box>
   )
