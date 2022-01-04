@@ -31,17 +31,17 @@ const Faq = () => {
     <Box>
       <Typography variant="h2">Frequently Asked Questions</Typography>
 
-      <Box sx={{ my: "20px" }}>
+      <Box sx={{ mt: "20px", mb: "60px" }}>
         <Typography variant="h3">Course Questions</Typography>
         {accordion(faq.courseFaq)}
       </Box>
 
-      <Box sx={{ my: "20px" }}>
+      <Box sx={{ mb: "60px" }}>
         <Typography variant="h3">Badminton Questions</Typography>
         {accordion(faq.badmintonFaq)}
       </Box>
 
-      <Box sx={{ my: "20px" }}>
+      <Box sx={{ mb: "40px" }}>
         <Typography variant="h3">Enrollment Questions</Typography>
         {accordion(faq.enrollmentFaq)}
       </Box>
