@@ -5,7 +5,7 @@ module.exports = {
     return [
       {
         source: "/",
-        destination: "https://www.nextjs.org/",
+        destination: "https://app.swiftbadminton.com/",
         permanent: true,
       },
     ]
