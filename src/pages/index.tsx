@@ -1,7 +1,5 @@
 import type { NextPage } from "next"
 import Container from "@mui/material/Container"
-import Typography from "@mui/material/Typography"
-import Box from "@mui/material/Box"
 
 import Header from "../components/Header"
 import Intro from "../components/Intro"
@@ -14,39 +12,7 @@ import Lcw from "../components/Lcw"
 import SwiftChecklists from "../components/SwiftChecklists"
 import Bonuses from "../components/Bonuses"
 import Faq from "../components/Faq"
-
-type BgProps = {
-  color: string
-}
-
-const ThinDiv: React.FC = ({ children }) => (
-  <Container maxWidth={false} sx={{ maxWidth: "800px" }}>
-    {children}
-  </Container>
-)
-
-const MediumDiv: React.FC = ({ children }) => (
-  <Container maxWidth="md">{children}</Container>
-)
-
-const Background: React.FC<BgProps> = ({ color, children }) => (
-  <Container
-    maxWidth={false}
-    disableGutters
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      backgroundColor: color,
-      py: {
-        xs: "20px",
-        sm: "50px",
-      },
-    }}
-  >
-    {children}
-  </Container>
-)
+import { ThinDiv, MediumDiv, Background } from "../components/Layout"
 
 const Home: NextPage = () => {
   return (
