@@ -2,7 +2,6 @@ import Image from "next/image"
 import axios from "axios"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
-import Hidden from "@mui/material/Hidden"
 import Box from "@mui/material/Box"
 import getStripe from "../lib/getStripe"
 
@@ -49,7 +48,7 @@ const CTA = ({ sevenDays, margin }: Props) => {
           // },
         }}
       >
-        <div>
+        <Box>
           <Typography
             variant="h4"
             id="buttonText"
@@ -59,19 +58,21 @@ const CTA = ({ sevenDays, margin }: Props) => {
           >
             Get Instant Access
           </Typography>
-          <Hidden xsDown>
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: "1rem",
-                color: "white",
-                mb: 0,
-              }}
-            >
-              Click Here to Enroll Now and Reach Your Badminton Goals
-            </Typography>
-          </Hidden>
-        </div>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "1rem",
+              color: "white",
+              mb: 0,
+              display: {
+                xs: "none",
+                sm: "block",
+              },
+            }}
+          >
+            Click Here to Enroll Now and Reach Your Badminton Goals
+          </Typography>
+        </Box>
       </Button>
 
       <Typography
