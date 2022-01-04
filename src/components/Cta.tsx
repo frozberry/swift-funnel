@@ -50,14 +50,14 @@ const CTA = ({ sevenDays, margin = false }: Props) => {
           <Typography
             variant="h4"
             id="buttonText"
-            style={{
+            sx={{
               fontWeight: "bold",
             }}
           >
             Get Instant Access
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             sx={{
               fontSize: "1rem",
               color: "white",

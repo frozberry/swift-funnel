@@ -22,7 +22,16 @@ const Header = () => {
           layout="responsive"
         />
       </Box>
-      <Typography variant="h1" mb="30px">
+      <Typography
+        variant="h1"
+        sx={{
+          mb: "30px",
+          fontSize: {
+            xs: "1.5rem",
+            sm: "2.5rem",
+          },
+        }}
+      >
         Revealed: The Hidden System That Any Badminton Player Can Use To
         Skyrocket Their Progress
       </Typography>
