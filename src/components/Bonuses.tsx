@@ -47,7 +47,7 @@ const data = [
 
 const Bonuses = () => {
   return (
-    <Box mb="40px">
+    <Box mb="20px">
       <Typography variant="h3">
         <b>Bonus Courses</b>
       </Typography>

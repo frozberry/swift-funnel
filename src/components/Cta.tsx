@@ -29,7 +29,6 @@ const CTA = ({ sevenDays, margin = false }: Props) => {
   return (
     <Box
       sx={{
-        my: "50px",
         my: {
           xs: "20px",
           sm: "50px",

@@ -1,4 +1,5 @@
 import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
 
 const LCW = () => {
   const img = {
@@ -11,7 +12,7 @@ const LCW = () => {
     marginRight: "auto",
   }
   return (
-    <div>
+    <Box mb="40px">
       <Typography variant="h3">
         <b>Lee Chong Wei Analysis</b>
       </Typography>
@@ -32,7 +33,7 @@ const LCW = () => {
         I directly relate it to the concepts covered in each lesson, so
         you&apos;ll never feel overwhelmed.
       </Typography>
-    </div>
+    </Box>
   )
 }
 
