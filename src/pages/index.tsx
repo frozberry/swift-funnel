@@ -38,7 +38,10 @@ const Background: React.FC<BgProps> = ({ color, children }) => (
       flexDirection: "column",
       alignItems: "center",
       backgroundColor: color,
-      py: "50px",
+      py: {
+        xs: "20px",
+        sm: "50px",
+      },
     }}
   >
     {children}
