@@ -483,7 +483,7 @@ const enrollmentFaq = [
       <>
         <p style={answer}>
           After you sign up, you&rsquo;ll get instant access to the entire
-          course as well as the Diving Masterclass bonus.
+          course as well as all of the included bonus courses.
         </p>
       </>
     ),
