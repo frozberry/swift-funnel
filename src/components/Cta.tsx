@@ -126,7 +126,7 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
             marginRight: "auto",
             width: {
               xs: "60%",
-              sm: "40%",
+              sm: "50%",
             },
           }}
         >
