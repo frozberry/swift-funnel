@@ -21,6 +21,7 @@ const Home: NextPage = () => {
       }}
     >
       <Container
+        maxWidth={false}
         sx={{
           backgroundColor: "warning.main",
           height: "25px",
