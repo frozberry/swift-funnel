@@ -2,12 +2,6 @@ import ReactPlayer from "react-player/wistia"
 import Container from "@mui/material/Container"
 import Box from "@mui/material/Box"
 
-const PlayerStyle: React.CSSProperties = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-}
-
 const VideoPlayer = () => {
   return (
     <Container maxWidth="lg">
@@ -19,7 +13,11 @@ const VideoPlayer = () => {
       >
         <ReactPlayer
           url="https://swiftbadminton.wistia.com/medias/v37i7ucb0f"
-          style={PlayerStyle}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
           width="100%"
           height="100%"
           pip={true}

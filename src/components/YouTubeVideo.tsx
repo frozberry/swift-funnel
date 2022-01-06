@@ -7,12 +7,6 @@ type Props = {
   videoUrl: string
 }
 
-const playerStyle: React.CSSProperties = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-}
-
 const FFVideo = ({ videoUrl }: Props) => {
   return (
     <Container maxWidth="lg">
@@ -24,7 +18,11 @@ const FFVideo = ({ videoUrl }: Props) => {
       >
         <ReactPlayer
           url={videoUrl}
-          style={playerStyle}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
           width="100%"
           height="100%"
           controls
