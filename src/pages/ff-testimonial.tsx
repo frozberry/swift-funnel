@@ -4,7 +4,6 @@ import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
-import { Link as MuiLink } from "@mui/material/"
 import YouTubeVideo from "../components/YouTubeVideo"
 import { ThinDiv } from "../components/Layout"
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
@@ -41,7 +40,7 @@ const Home: NextPage = () => {
             mt: "6px",
           }}
         >
-          Enrollment shuts tomorrow 11:59pm GMT
+          Enrollment closes in a few days{" "}
         </Typography>
       </Container>
 
@@ -75,25 +74,7 @@ const Home: NextPage = () => {
           Lesson 11: China Jump
         </Typography>
 
-        <YouTubeVideo videoUrl="https://youtu.be/E7JCEPqo5Tg" />
-        <Typography
-          variant="body1"
-          sx={{
-            color: "white",
-            fontWeight: "bold",
-            mb: "0px",
-            mt: "20px",
-          }}
-        >
-          PDF Worksheet
-        </Typography>
-        <MuiLink
-          href="https://drive.google.com/file/d/1R9WpfISIU7mpwZr7xvCtAlaU74grVQ2m/view"
-          rel="noopener"
-          target="_blank"
-        >
-          China Jump
-        </MuiLink>
+        <YouTubeVideo videoUrl="https://www.youtube.com/watch?v=5vONUryiZQ0" />
       </ThinDiv>
 
       <Link href="https://www.swiftbadminton.com/ff" passHref>
@@ -118,7 +99,7 @@ const Home: NextPage = () => {
                 textAlign: "center",
               }}
             >
-              Yes, I want the full course
+              Get Instant Access
             </Typography>
             <Typography
               variant="body2"
