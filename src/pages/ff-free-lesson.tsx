@@ -6,7 +6,7 @@ import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import { Link as MuiLink } from "@mui/material/"
 import YouTubeVideo from "../components/YouTubeVideo"
-import { ThinDiv, MediumDiv } from "../components/Layout"
+import { MediumDiv } from "../components/Layout"
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
 
 const Home: NextPage = () => {
