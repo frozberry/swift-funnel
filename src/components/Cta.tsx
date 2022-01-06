@@ -55,7 +55,6 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
         <Box>
           <Typography
             variant="h4"
-            id="buttonText"
             sx={{
               fontWeight: "bold",
             }}
