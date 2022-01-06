@@ -32,7 +32,19 @@ const Home: NextPage = () => {
           flexDirection: "row",
         }}
       >
-        <ErrorOutlineIcon sx={{ mt: "12px", color: "white", mr: "8px" }} />
+        <ErrorOutlineIcon
+          sx={{
+            color: "white",
+            mt: {
+              xs: "10px",
+              sm: "12px",
+            },
+            mr: {
+              xs: "2px",
+              sm: "8px",
+            },
+          }}
+        />
         <Typography
           variant="body1"
           sx={{

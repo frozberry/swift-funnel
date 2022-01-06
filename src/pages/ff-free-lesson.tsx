@@ -33,7 +33,19 @@ const Home: NextPage = () => {
           flexDirection: "row",
         }}
       >
-        <ErrorOutlineIcon sx={{ mt: "12px", color: "white", mr: "8px" }} />
+        <ErrorOutlineIcon
+          sx={{
+            color: "white",
+            mt: {
+              xs: "10px",
+              sm: "12px",
+            },
+            mr: {
+              xs: "1px",
+              sm: "8px",
+            },
+          }}
+        />
         <Typography
           variant="body1"
           sx={{
@@ -42,7 +54,7 @@ const Home: NextPage = () => {
             mt: "6px",
           }}
         >
-          Enrollment shuts tomorrow 11:59pm GMT
+          Enrollment shuts tomorrow 11:59pm
         </Typography>
       </Container>
 
