@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import type { NextPage } from "next"
 import Container from "@mui/material/Container"
 import Header from "../components/Header"
@@ -14,6 +15,20 @@ import Faq from "../components/Faq"
 import { ThinDiv, MediumDiv, Background } from "../components/Layout"
 
 const Home: NextPage = () => {
+  const [hidden, setHidden] = useState(true)
+
+  useEffect(() => {
+    const visited = window.localStorage.getItem("ff-visited")
+    if (visited === "true") {
+      setHidden(false)
+    } else {
+      window.localStorage.setItem("ff-visited", "true")
+      setTimeout(() => {
+        setHidden(false)
+      }, 36 * 60 * 1000) // time until cta 36m
+    }
+  }, [])
+
   return (
     <Container
       maxWidth={false}
@@ -29,33 +44,37 @@ const Home: NextPage = () => {
         <Header />
       </ThinDiv>
       <VideoPlayer />
-      <Cta sevenDays margin />
-      <Background color="white">
-        <ThinDiv>
-          <Intro />
-        </ThinDiv>
-      </Background>
-      <Background color="bgLight.main">
-        <ThinDiv>
-          <Videos />
-        </ThinDiv>
-      </Background>
-      <Background color="white">
-        <ThinDiv>
-          <SlowMotion />
-          <Lcw />
-          <Worksheets />
-          <SwiftChecklists />
-          <Bonuses />
-        </ThinDiv>
-      </Background>
-      <Cta sevenDays margin />
-      <Background color="white">
-        <MediumDiv>
-          <Faq />
-        </MediumDiv>
-      </Background>
-      <Cta sevenDays />
+      {!hidden && (
+        <>
+          <Cta sevenDays margin />
+          <Background color="white">
+            <ThinDiv>
+              <Intro />
+            </ThinDiv>
+          </Background>
+          <Background color="bgLight.main">
+            <ThinDiv>
+              <Videos />
+            </ThinDiv>
+          </Background>
+          <Background color="white">
+            <ThinDiv>
+              <SlowMotion />
+              <Lcw />
+              <Worksheets />
+              <SwiftChecklists />
+              <Bonuses />
+            </ThinDiv>
+          </Background>
+          <Cta sevenDays margin />
+          <Background color="white">
+            <MediumDiv>
+              <Faq />
+            </MediumDiv>
+          </Background>
+          <Cta sevenDays />
+        </>
+      )}
     </Container>
   )
 }
