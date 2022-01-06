@@ -1,22 +1,35 @@
 import Container from "@mui/material/Container"
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player/youtube"
+// import ReactPlayer from "react-player/wistia"
+import Box from "@mui/material/Box"
 
 type Props = {
   videoUrl: string
 }
 
+const playerStyle: React.CSSProperties = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+}
+
 const FFVideo = ({ videoUrl }: Props) => {
-  // This is probably not the best way to do center this, but it works for now
   return (
-    <Container
-      maxWidth="md"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <ReactPlayer url={videoUrl} height={480} width={852} controls />
+    <Container maxWidth="lg">
+      <Box
+        sx={{
+          position: "relative",
+          pt: "56.25%",
+        }}
+      >
+        <ReactPlayer
+          url={videoUrl}
+          style={playerStyle}
+          width="100%"
+          height="100%"
+          controls
+        />
+      </Box>
     </Container>
   )
 }

@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import YouTubeVideo from "../components/YouTubeVideo"
+import VideoPlayer from "../components/VideoPlayer"
 import { ThinDiv } from "../components/Layout"
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
 
