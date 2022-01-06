@@ -5,8 +5,7 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import YouTubeVideo from "../components/YouTubeVideo"
-import VideoPlayer from "../components/VideoPlayer"
-import { ThinDiv } from "../components/Layout"
+import { MediumDiv } from "../components/Layout"
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
 
 const Home: NextPage = () => {
@@ -45,7 +44,7 @@ const Home: NextPage = () => {
         </Typography>
       </Container>
 
-      <ThinDiv>
+      <MediumDiv>
         <Typography
           variant="h2"
           sx={{
@@ -76,7 +75,7 @@ const Home: NextPage = () => {
         </Typography>
 
         <YouTubeVideo videoUrl="https://www.youtube.com/watch?v=5vONUryiZQ0" />
-      </ThinDiv>
+      </MediumDiv>
 
       <Link href="https://www.swiftbadminton.com/ff" passHref>
         <Button

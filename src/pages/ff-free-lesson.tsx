@@ -6,7 +6,7 @@ import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import { Link as MuiLink } from "@mui/material/"
 import YouTubeVideo from "../components/YouTubeVideo"
-import { ThinDiv } from "../components/Layout"
+import { ThinDiv, MediumDiv } from "../components/Layout"
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
 
 const Home: NextPage = () => {
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         </Typography>
       </Container>
 
-      <ThinDiv>
+      <MediumDiv>
         <Typography
           variant="h2"
           sx={{
@@ -94,7 +94,7 @@ const Home: NextPage = () => {
         >
           China Jump
         </MuiLink>
-      </ThinDiv>
+      </MediumDiv>
 
       <Link href="https://www.swiftbadminton.com/ff" passHref>
         <Button
