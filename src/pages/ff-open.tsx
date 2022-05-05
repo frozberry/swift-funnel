@@ -1,19 +1,28 @@
-import type { NextPage } from "next"
 import Container from "@mui/material/Container"
+import type { GetServerSideProps, NextPage } from "next"
+import Bonuses from "../components/Bonuses"
+import Cta from "../components/Cta"
+import Faq from "../components/Faq"
 import Header from "../components/Header"
 import Intro from "../components/Intro"
-import Worksheets from "../components/Worksheets"
-import Videos from "../components/Videos"
-import Cta from "../components/Cta"
-import VideoPlayer from "../components/VideoPlayer"
-import SlowMotion from "../components/SlowMotion"
+import { Background, MediumDiv, ThinDiv } from "../components/Layout"
 import Lcw from "../components/Lcw"
+import SlowMotion from "../components/SlowMotion"
 import SwiftChecklists from "../components/SwiftChecklists"
-import Bonuses from "../components/Bonuses"
-import Faq from "../components/Faq"
-import { ThinDiv, MediumDiv, Background } from "../components/Layout"
+import VideoPlayer from "../components/VideoPlayer"
+import Videos from "../components/Videos"
+import Worksheets from "../components/Worksheets"
 
-const Home: NextPage = () => {
+type Props = {
+  country: string
+}
+
+export const getServerSideProps: GetServerSideProps = async (context: any) => {
+  const country = context.query.country
+  return { props: { country } }
+}
+
+const Home: NextPage<Props> = ({ country }) => {
   return (
     <Container
       maxWidth={false}
@@ -25,6 +34,7 @@ const Home: NextPage = () => {
         alignItems: "center",
       }}
     >
+      {country}
       <ThinDiv>
         <Header />
       </ThinDiv>
