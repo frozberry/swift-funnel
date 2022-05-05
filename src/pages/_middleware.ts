@@ -14,11 +14,6 @@ export function middleware(req: NextRequest) {
   if (nextUrl.pathname.includes("/api")) {
     return undefined
   }
-  if (nextUrl.search.includes("country")) {
-    return undefined
-  }
-
-  console.log(geo)
 
   return NextResponse.rewrite(`${nextUrl.pathname}?country=${country}`)
 }
