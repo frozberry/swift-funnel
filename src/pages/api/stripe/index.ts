@@ -17,14 +17,31 @@ const courses = {
 
 const GET = async (req: NextApiRequest, res: NextApiResponse) => {
   const country = req.headers["x-vercel-ip-country"] || "none"
+  const isIndia = country === "IN"
+  const { course } = req.query
 
-  const gbp = "https://buy.stripe.com/9AQaIE0dH5VPctG6oo"
-  const india = "https://buy.stripe.com/8wM0406C53NHeBO6or"
-
-  const data = {
-    link: country === "IN" ? india : gbp,
+  if (course === "ff") {
+    const data = {
+      link: isIndia ? courses.ff.india : courses.ff.gbp,
+    }
+    res.send(data)
   }
-  res.send(data)
+
+  if (course === "pp") {
+    const data = {
+      link: isIndia ? courses.pp.india : courses.pp.gbp,
+    }
+    res.send(data)
+  }
+
+  if (course === "kotc") {
+    const data = {
+      link: isIndia ? courses.kotc.india : courses.kotc.gbp,
+    }
+    res.send(data)
+  }
+
+  res.status(400).end("Invalid course")
 }
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
