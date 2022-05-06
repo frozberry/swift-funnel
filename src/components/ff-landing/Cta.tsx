@@ -3,7 +3,7 @@ import axios from "axios"
 import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Box from "@mui/material/Box"
-import getStripe from "../lib/getStripe"
+import getStripe from "../../lib/getStripe"
 import { useRouter } from "next/router"
 
 type Props = {
