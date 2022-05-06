@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 
 const GET = async (req: NextApiRequest, res: NextApiResponse) => {
+  console.log(req.headers)
+
   const country = req.headers["x-vercel-ip-country-region"] || "none"
   console.log(country)
 
