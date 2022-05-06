@@ -13,16 +13,7 @@ import VideoPlayer from "../components/VideoPlayer"
 import Videos from "../components/Videos"
 import Worksheets from "../components/Worksheets"
 
-type Props = {
-  country: string
-}
-
-export const getServerSideProps: GetServerSideProps = async (context: any) => {
-  const country = context.query.country
-  return { props: { country } }
-}
-
-const Home: NextPage<Props> = ({ country }) => {
+const Home: NextPage = () => {
   return (
     <Container
       maxWidth={false}
@@ -34,7 +25,6 @@ const Home: NextPage<Props> = ({ country }) => {
         alignItems: "center",
       }}
     >
-      {country}
       <ThinDiv>
         <Header />
       </ThinDiv>
