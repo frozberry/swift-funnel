@@ -25,6 +25,7 @@ const GET = async (req: NextApiRequest, res: NextApiResponse) => {
       link: isIndia ? courses.ff.india : courses.ff.gbp,
     }
     res.send(data)
+    return
   }
 
   if (course === "pp") {
@@ -32,6 +33,7 @@ const GET = async (req: NextApiRequest, res: NextApiResponse) => {
       link: isIndia ? courses.pp.india : courses.pp.gbp,
     }
     res.send(data)
+    return
   }
 
   if (course === "kotc") {
@@ -39,6 +41,7 @@ const GET = async (req: NextApiRequest, res: NextApiResponse) => {
       link: isIndia ? courses.kotc.india : courses.kotc.gbp,
     }
     res.send(data)
+    return
   }
 
   res.status(400).end("Invalid course")
