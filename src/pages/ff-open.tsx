@@ -13,7 +13,7 @@ import VideoPlayer from "../components/VideoPlayer"
 import Videos from "../components/Videos"
 import Worksheets from "../components/Worksheets"
 
-const Home: NextPage<Props> = () => {
+const Home: NextPage = () => {
   return (
     <Container
       maxWidth={false}

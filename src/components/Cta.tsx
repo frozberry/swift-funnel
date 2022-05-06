@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Box from "@mui/material/Box"
 import getStripe from "../lib/getStripe"
+import { useRouter } from "next/router"
 
 type Props = {
   sevenDays?: boolean
@@ -11,19 +12,24 @@ type Props = {
 }
 
 const CTA = ({ sevenDays = false, margin = false }: Props) => {
+  const router = useRouter()
+
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
 
-    const api = process.env.NEXT_PUBLIC_API!
-    const response = await axios.post(`${api}/checkout/create-session/ff`)
-    const checkoutSession = response.data
+    const res = await axios.get("/api/stripe")
+    router.push(res.data.link)
 
-    const stripe = await getStripe()
-    const { error } = await stripe!.redirectToCheckout({
-      sessionId: checkoutSession.id,
-    })
+    // const api = process.env.NEXT_PUBLIC_API!
+    // const response = await axios.post(`${api}/checkout/create-session/ff`)
+    // const checkoutSession = response.data
 
-    console.warn(error.message)
+    // const stripe = await getStripe()
+    // const { error } = await stripe!.redirectToCheckout({
+    //   sessionId: checkoutSession.id,
+    // })
+
+    // console.warn(error.message)
   }
 
   return (
