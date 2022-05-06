@@ -2,10 +2,11 @@ import type { NextApiRequest, NextApiResponse } from "next"
 
 const GET = async (req: NextApiRequest, res: NextApiResponse) => {
   const country = req.headers["x-vercel-ip-country"] || "none"
+  const gbp = "https://buy.stripe.com/9AQaIE0dH5VPctG6oo"
+  const india = "https://buy.stripe.com/8wM0406C53NHeBO6or"
 
   const data = {
-    link: "foo",
-    country,
+    link: country === "IN" ? india : gbp,
   }
   res.send(data)
 }
