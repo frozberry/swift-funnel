@@ -17,7 +17,7 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
 
-    const res = await axios.get("/api/stripe")
+    const res = await axios.get("/api/stripe?course=ff")
     router.push(res.data.link)
 
     // const api = process.env.NEXT_PUBLIC_API!
