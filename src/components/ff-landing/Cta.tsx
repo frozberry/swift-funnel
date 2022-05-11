@@ -12,13 +12,8 @@ type Props = {
 }
 
 const CTA = ({ sevenDays = false, margin = false }: Props) => {
-  const router = useRouter()
-
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
-
-    // const res = await axios.get("/api/stripe?course=ff")
-    // router.push(res.data.link)
 
     const response = await axios.post(`api/stripe/checkout`, {
       course: "ff",
