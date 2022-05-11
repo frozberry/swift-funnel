@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import { Link as MuiLink } from "@mui/material/"
-import YouTubeVideo from "../components/YouTubeVideo"
-import { MediumDiv } from "../components/Layout"
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
+import { MediumDiv } from "../components/ff-landing/Layout"
+import YouTubeVideo from "../components/ff-landing/YouTubeVideo"
 
 const Home: NextPage = () => {
   return (

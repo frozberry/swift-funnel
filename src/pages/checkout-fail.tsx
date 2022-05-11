@@ -1,7 +1,7 @@
 import type { NextPage } from "next"
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
-import { MediumDiv } from "../components/Layout"
+import { MediumDiv } from "../components/ff-landing/Layout"
 
 const Home: NextPage = () => {
   return (
