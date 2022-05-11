@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
-import faq from "../lib/FaqCopy"
+import faq from "../../lib/FaqCopy"
 
 const Faq = () => {
   const accordion = (faqObject: any) =>

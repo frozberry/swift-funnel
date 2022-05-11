@@ -17,19 +17,21 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
 
-    const res = await axios.get("/api/stripe?course=ff")
-    router.push(res.data.link)
+    // const res = await axios.get("/api/stripe?course=ff")
+    // router.push(res.data.link)
 
-    // const api = process.env.NEXT_PUBLIC_API!
-    // const response = await axios.post(`${api}/checkout/create-session/ff`)
-    // const checkoutSession = response.data
+    const response = await axios.post(`api/stripe/checkout`, {
+      course: "ff",
+      returnPath: "/ff-open",
+    })
+    const checkoutSession = response.data
 
-    // const stripe = await getStripe()
-    // const { error } = await stripe!.redirectToCheckout({
-    //   sessionId: checkoutSession.id,
-    // })
+    const stripe = await getStripe()
+    const { error } = await stripe!.redirectToCheckout({
+      sessionId: checkoutSession.id,
+    })
 
-    // console.warn(error.message)
+    console.warn(error.message)
   }
 
   return (
