@@ -6,8 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build",
-    "prisma:generate": "prisma generate",
     "lint": "eslint src",
     "fix": "eslint --fix",
     "check": "npx tsc",
@@ -22,16 +20,11 @@
     "@mui/material": "^5.4.2",
     "@stripe/stripe-js": "^1.22.0",
     "axios": "^0.24.0",
-    "formik": "^2.2.9",
     "next": "^12.0.7",
-    "next-auth": "^4.3.4",
-    "next-plausible": "^3.1.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-hot-toast": "^2.2.0",
     "react-player": "^2.9.0",
-    "stripe": "^9.0.0",
-    "yup": "^0.32.11"
+    "stripe": "^9.0.0"
   },
   "devDependencies": {
     "@types/react": "17.0.35",
