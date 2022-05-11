@@ -22,7 +22,7 @@ const CTA = ({ sevenDays = false, margin = false }: Props) => {
 
     const response = await axios.post(`api/stripe/checkout`, {
       course: "ff",
-      returnPath: "/ff-open",
+      returnPath: sevenDays ? "ff" : "/ff-open",
     })
     const checkoutSession = response.data
 
