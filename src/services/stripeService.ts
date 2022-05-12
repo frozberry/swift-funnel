@@ -36,7 +36,7 @@ export const createCheckoutSession = async (
   }
 
   const successUrl = `${process.env
-    .NEXT_PUBLIC_COURSE_URL!}/new-user?session={CHECKOUT_SESSION_ID}`
+    .NEXT_PUBLIC_COURSE_URL!}/new-user?sessionId={CHECKOUT_SESSION_ID}`
   const cancelUrl = `${process.env.NEXT_PUBLIC_URL!}/${returnPath}`
 
   const sessionData: Stripe.Checkout.SessionCreateParams = {
