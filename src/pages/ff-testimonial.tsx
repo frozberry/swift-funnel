@@ -59,24 +59,9 @@ const Home: NextPage = () => {
 
       <MediumDiv>
         <Typography
-          variant="h2"
-          sx={{
-            mt: "20px",
-            color: "white",
-            opacity: "50%",
-            fontWeight: "normal",
-            fontSize: {
-              xs: "1rem",
-              sm: "1.25rem",
-            },
-          }}
-        >
-          Free Lesson from the Footwork Fastlane
-        </Typography>
-        <Typography
           variant="h1"
           sx={{
-            mt: "10px",
+            mt: "20px",
             mb: "30px",
             fontSize: {
               xs: "1.5rem",
@@ -84,13 +69,13 @@ const Home: NextPage = () => {
             },
           }}
         >
-          Lesson 11: China Jump
+          Footwork Fastlane Success Stories
         </Typography>
 
         <YouTubeVideo videoUrl="https://www.youtube.com/watch?v=5vONUryiZQ0" />
       </MediumDiv>
 
-      <Link href="https://www.swiftbadminton.com/ff" passHref>
+      <Link href="/ff" passHref>
         <Button
           variant="contained"
           sx={{
