@@ -109,7 +109,7 @@ const Home: NextPage = () => {
         </MuiLink>
       </MediumDiv>
 
-      <Link href="https://www.swiftbadminton.com/ff" passHref>
+      <Link href="/ff" passHref>
         <Button
           variant="contained"
           sx={{
