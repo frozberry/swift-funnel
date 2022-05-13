@@ -1,11 +1,12 @@
-import Head from "next/head"
-import deadlineFunnel from "../lib/deadlineFunnel"
-import { AppProps } from "next/app"
-import { ThemeProvider } from "@mui/material/styles"
-import CssBaseline from "@mui/material/CssBaseline"
 import { CacheProvider, EmotionCache } from "@emotion/react"
+import CssBaseline from "@mui/material/CssBaseline"
+import { ThemeProvider } from "@mui/material/styles"
+import PlausibleProvider from "next-plausible"
+import { AppProps } from "next/app"
+import Head from "next/head"
 import theme from "../../styles/theme"
 import createEmotionCache from "../lib/createEmotionCache"
+import deadlineFunnel from "../lib/deadlineFunnel"
 import "../styles.css"
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -27,10 +28,12 @@ export default function MyApp(props: MyAppProps) {
           {deadlineFunnel}
         </script>
       </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <PlausibleProvider domain="swiftbadminton.com">
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </PlausibleProvider>
     </CacheProvider>
   )
 }
