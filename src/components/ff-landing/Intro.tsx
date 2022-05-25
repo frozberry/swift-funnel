@@ -2,7 +2,11 @@ import Image from "next/image"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 
-const Intro = () => {
+type Props = {
+  deadline: boolean
+}
+
+const Intro = ({ deadline }: Props) => {
   return (
     <Box>
       <Typography variant="h2">
@@ -60,10 +64,12 @@ const Intro = () => {
         you&rsquo;ll be able to move around a badminton court with complete
         speed and precision.
       </Typography>
-      <Typography variant="body1">
-        For the next 7 days ONLY, I&rsquo;m opening up enrollment to the
-        Footwork Fastlane for Swift Badminton subscribers only.
-      </Typography>
+      {deadline && (
+        <Typography variant="body1">
+          For the next 7 days ONLY, I&rsquo;m opening up enrollment to the
+          Footwork Fastlane for Swift Badminton subscribers.
+        </Typography>
+      )}
 
       <Typography variant="body1">
         So if you&rsquo;re interested in taking your badminton game to the next

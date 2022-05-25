@@ -32,7 +32,7 @@ const Home: NextPage = () => {
       <Cta margin />
       <Background color="white">
         <ThinDiv>
-          <Intro />
+          <Intro deadline={false} />
         </ThinDiv>
       </Background>
       <Background color="bgLight.main">

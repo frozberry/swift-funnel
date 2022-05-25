@@ -49,7 +49,7 @@ const Home: NextPage = () => {
           <Cta sevenDays margin />
           <Background color="white">
             <ThinDiv>
-              <Intro />
+              <Intro deadline={true} />
             </ThinDiv>
           </Background>
           <Background color="bgLight.main">
