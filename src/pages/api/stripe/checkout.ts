@@ -6,14 +6,19 @@ export type CourseCode = "ff" | "pp" | "kotc"
 export type StripeCheckoutBody = {
   course: CourseCode
   returnPath: string
+  geopricing: boolean
 }
 
 const POST = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { course, returnPath }: StripeCheckoutBody = req.body
+  const { course, returnPath, geopricing }: StripeCheckoutBody = req.body
   const country = req.headers["x-vercel-ip-country"] || "none"
   const isIndia = country === "IN"
 
-  const session = await createCheckoutSession(course, isIndia, returnPath)
+  const session = await createCheckoutSession(
+    course,
+    isIndia && geopricing,
+    returnPath
+  )
   res.send(session)
 }
 

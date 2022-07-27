@@ -4,21 +4,28 @@ import Typography from "@mui/material/Typography"
 import Button from "@mui/material/Button"
 import Box from "@mui/material/Box"
 import getStripe from "../../lib/getStripe"
-import { useRouter } from "next/router"
 
 type Props = {
   sevenDays?: boolean
   margin?: boolean
+  geopricing?: boolean
 }
 
-const CTA = ({ sevenDays = false, margin = false }: Props) => {
+const CTA = ({
+  sevenDays = false,
+  margin = false,
+  geopricing = true,
+}: Props) => {
   const handleClick = async (e: React.MouseEvent) => {
     e.preventDefault()
 
     const response = await axios.post(`api/stripe/checkout`, {
+      // Maybe should be type checked?
       course: "ff",
       returnPath: sevenDays ? "ff" : "ff-open",
+      geopricing: geopricing,
     })
+
     const checkoutSession = response.data
 
     const stripe = await getStripe()

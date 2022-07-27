@@ -13,8 +13,8 @@ import VideoPlayer from "../components/ff-landing/VideoPlayer"
 import Videos from "../components/ff-landing/Videos"
 import Worksheets from "../components/ff-landing/Worksheets"
 
+// Open page without geopricing
 const Home: NextPage = () => {
-  
   return (
     <Container
       maxWidth={false}
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <Header />
       </ThinDiv>
       <VideoPlayer />
-      <Cta margin />
+      <Cta margin geopricing={false} />
       <Background color="white">
         <ThinDiv>
           <Intro deadline={false} />
@@ -50,13 +50,13 @@ const Home: NextPage = () => {
           <Bonuses />
         </ThinDiv>
       </Background>
-      <Cta margin />
+      <Cta margin geopricing={false} />
       <Background color="white">
         <MediumDiv>
           <Faq />
         </MediumDiv>
       </Background>
-      <Cta />
+      <Cta geopricing={false} />
     </Container>
   )
 }
