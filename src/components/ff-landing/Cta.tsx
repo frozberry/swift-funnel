@@ -22,7 +22,7 @@ const CTA = ({
     const response = await axios.post(`api/stripe/checkout`, {
       // Maybe should be type checked?
       course: "ff",
-      returnPath: sevenDays ? "ff" : "ff-open",
+      returnPath: sevenDays ? "ff" : geopricing ? "ff-open" : "ffc",
       geopricing: geopricing,
     })
 
